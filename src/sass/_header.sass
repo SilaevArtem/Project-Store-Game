@@ -1,3 +1,46 @@
 .header
     background-color: $color-blue-dark
     grid-column: full-start  / col-end 6
+    display: grid
+    grid-template-rows: 1fr min-content mimax(10rem, min-content) 1fr
+    padding: 5rem 5rem 5rem 6rem
+    background: url(../img/background3.png) center/ cover no-repeat
+    &__title
+        font-weight: 300
+        font-size: 1.9rem
+        align-self: end
+    &__btn
+        align-self: start
+        justify-self: start
+    &__line-text
+        font-weight: 700
+        font-size: 1.6rem
+        line-height: 1.9rem
+        color: $color-green-dark
+        margin-bottom: 1rem
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        grid-gap: 2rem
+        align-items: center
+        &::before, &::after
+            content: ""
+            height: .1rem
+            display: block
+            background-color: $color-white
+    &__img
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        justify-items: center
+        grid-gap: 2rem
+            
+    &__img img
+        height: 4rem
+        filter: brightness(70%)  //Яркость иконок
+
+.logo
+    display: block
+    margin: 0 auto
+    margin-bottom: 8rem
+    &__img
+        display: block
+        margin: 0 auto
